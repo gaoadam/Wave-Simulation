@@ -17,7 +17,7 @@ The raw tensor file generated in this project has been ommited from the reposito
 
 ## Images
 
-Wave Simulation
+Wave Simulation at specific frame
 ![image](https://user-images.githubusercontent.com/16550043/231630331-3ed1d167-52bb-420a-b51c-b1338fc7af14.png)
 
 Spectrograms of wave at different locations:
