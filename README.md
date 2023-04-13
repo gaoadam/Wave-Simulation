@@ -1,5 +1,5 @@
 # Wave-Phenomena
-## Simulating the Classic Wave Equation with Torch
+## Simulating the Classic Wave Equation with Torch and CUDA
 In this project, I simulate waves as a function of 2 dimensional coordinates according to the classic wave equation. Because simulating partial differential equations (PDE)'s across multiple dimensions can be so computationally expensive, I use the parallelized computing capabilities of my own personal GPU and torch's CUDA support. Some things to note:
 * The value of a wave function u may be calculated according to u at a previous time
 * The time step calculation of u may be parallelized across spatial coordinates x and y, i.e. use u(x,y,t) at all x and y to calculate u(x,y,t+dt)
