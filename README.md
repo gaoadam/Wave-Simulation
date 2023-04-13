@@ -22,6 +22,7 @@ Wave Simulation at specific frame
 
 Wave Signal at different locations
 ![image](https://user-images.githubusercontent.com/16550043/231630707-0dc3a4d0-f2f8-4c61-a18d-db632b029d15.png)
+
 ![image](https://user-images.githubusercontent.com/16550043/231630772-b56bb77b-6071-4ab3-8360-1bd7290b41e0.png)
 
 
