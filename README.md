@@ -12,5 +12,8 @@ The code is structured in the following files:
 * 'wavetorch.py' - module consisting of functions to simulate wave phenomena
 * 'Generate Data.ipynb' - Jupyter Notebook file showcasing how wavetorch.py can be used to generate a 2d video of wave phenomena, and the wave signal at different locations
 * 'Signal Processing.ipynb' - Jupyter Notebook file showcasing how generated signals may be spectrally decomposed
+
+The raw tensor file generated in this project has been ommited from the repository, due to its enourmous file size.
+
 ## Special Thanks
 I referenced Hans Petter Langtangen's works to understand computational physics as applied to partial differential equations. Please see the following link for more details: http://hplgit.github.io/wavebc/doc/pub/._wavebc_cyborg004.html#sec:app:numerical
