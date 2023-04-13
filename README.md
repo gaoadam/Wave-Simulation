@@ -15,6 +15,18 @@ The code is structured in the following files:
 
 The raw tensor file generated in this project has been ommited from the repository, due to its enourmous file size.
 
+## Images
+
+Wave Simulation
+![image](https://user-images.githubusercontent.com/16550043/231630331-3ed1d167-52bb-420a-b51c-b1338fc7af14.png)
+
+Spectrograms of wave at different locations:
+![image](https://user-images.githubusercontent.com/16550043/231630458-17f9f537-a24a-4f34-bbad-80b1d7e8311c.png)
+
+![image](https://user-images.githubusercontent.com/16550043/231630427-5962ce73-c9e8-421e-b1cb-537d448355ca.png)
+
+
+
 ## Wave Simulation Video
 Link to video of simulation of 2d waves over time:
 
@@ -22,4 +34,5 @@ https://www.youtube.com/watch?v=UdjUCrevOd0
 
 ## Special Thanks
 I referenced Hans Petter Langtangen's works to understand computational physics as applied to partial differential equations. Please see the following link for more details:
+
 http://hplgit.github.io/wavebc/doc/pub/._wavebc_cyborg004.html#sec:app:numerical
