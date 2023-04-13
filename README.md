@@ -28,10 +28,11 @@ Wave Signal at different locations:
 ![image](https://user-images.githubusercontent.com/16550043/231630772-b56bb77b-6071-4ab3-8360-1bd7290b41e0.png)
 
 Spectrograms of wave at different locations:
-![image](https://user-images.githubusercontent.com/16550043/231630458-17f9f537-a24a-4f34-bbad-80b1d7e8311c.png)
 
+![image](https://user-images.githubusercontent.com/16550043/231631727-44dbb33d-1767-400f-9e16-20a3648add85.png)
 
-![image](https://user-images.githubusercontent.com/16550043/231630427-5962ce73-c9e8-421e-b1cb-537d448355ca.png)
+![image](https://user-images.githubusercontent.com/16550043/231631768-4ca13671-3b85-4c62-bcdb-1a0404ca0486.png)
+
 
 
 
