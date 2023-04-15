@@ -44,7 +44,12 @@ Link to video of simulation of 2d waves over time:
 
 https://www.youtube.com/watch?v=UdjUCrevOd0
 
-## Special Thanks
+## Next Steps
+This first iteration serves as a basis to test my signal processing and machine learning methods (currently in development). In order to support this process, I will improve my simulation framework by:
+* Building unit conversions into my functions time step to hertz). Until then, I have deliberately kept unit labels as generic frame count until that is done, rather then displaying how many seconds each time frame might be. This way, my outputs stay truer to the computation aspect of the project.
+* Iteratively write the wave tensor to memory after each time step calculation, instead of writing it in one batch before saving. Currently, the amount of data I can save is bottlenecked by my GPU memory.
+
+## Thanks
 I referenced Hans Petter Langtangen's works to understand computational physics as applied to partial differential equations. Please see the following link for more details:
 
 http://hplgit.github.io/wavebc/doc/pub/._wavebc_cyborg004.html#sec:app:numerical
