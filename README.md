@@ -47,7 +47,6 @@ https://www.youtube.com/watch?v=UdjUCrevOd0
 ## Next Steps
 This first iteration serves as a basis to test different signal processing and machine learning methods. In order to support this process, I will improve my simulation framework by:
 * Building unit conversions into my generalized functions (time step to hertz). Until then, I have deliberately kept unit labels as generic frame-counts until the aforementioned is done. This way, my outputs stay truer to the computation aspects of the project.
-* Iteratively write the wave tensor to memory after each time step calculation, instead of writing it in one batch before saving. Currently, the amount of data I can save is bottlenecked by my GPU memory.
 
 ## Thanks
 I referenced Hans Petter Langtangen's works to understand computational physics as applied to partial differential equations. Please see the following link for more details:
