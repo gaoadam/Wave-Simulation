@@ -8,9 +8,10 @@ In this project, I simulate waves as a function of 2 dimensional coordinates acc
 Furthermore, this framework supports the customization of wave sources:
 * Multiple wave sources may be passed as function arguments eg two sine waves of varying frequencies
 
-## Code Structure
-The code is structured in the following files:
+## Project Structure
+The module is located in the src folder:
 * 'wavetorch.py' - module consisting of functions to simulate wave phenomena
+Demos using the module for reference can be found in the demos folder:
 * 'Generate Data.ipynb' - Jupyter Notebook file showcasing how wavetorch.py can be used to generate a 2d video of wave phenomena, and the wave signal at different locations
 * 'Signal Processing.ipynb' - Jupyter Notebook file showcasing how generated signals may be spectrally decomposed
 
