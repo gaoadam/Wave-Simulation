@@ -2,7 +2,7 @@
 ## Simulating the Classic Wave Equation with Torch and CUDA
 In this project, I simulate waves as a function of 2 dimensional coordinates according to the classic wave equation. Because simulating partial differential equations (PDE)'s across multiple dimensions can be so computationally expensive, I use the parallelized computing capabilities of my own personal GPU and torch's CUDA support:
 
-Torch is a machine learning module with robust tensor manipulation tools. CUDA is a parralel computing platform.
+Torch is a machine learning module with robust tensor manipulation tools. CUDA is a parallel computing platform.
 
 Some things to note:
 * The value of a wave function u may be calculated according to u at a previous time
