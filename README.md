@@ -1,6 +1,10 @@
 # Wave-Phenomena
 ## Simulating the Classic Wave Equation with Torch and CUDA
-In this project, I simulate waves as a function of 2 dimensional coordinates according to the classic wave equation. Because simulating partial differential equations (PDE)'s across multiple dimensions can be so computationally expensive, I use the parallelized computing capabilities of my own personal GPU and torch's CUDA support. Some things to note:
+In this project, I simulate waves as a function of 2 dimensional coordinates according to the classic wave equation. Because simulating partial differential equations (PDE)'s across multiple dimensions can be so computationally expensive, I use the parallelized computing capabilities of my own personal GPU and torch's CUDA support:
+
+Torch is a machine learning module with robust tensor manipulation tools. CUDA is a parralel computing platform.
+
+Some things to note:
 * The value of a wave function u may be calculated according to u at a previous time
 * The time step calculation of u may be parallelized across spatial coordinates x and y, i.e. use u(x,y,t) at all x and y to calculate u(x,y,t+dt)
 * The calculation of u may not be parallelized across time, meaning we must know u(t) to predict u(t+dt)
@@ -11,7 +15,7 @@ Furthermore, this framework supports the customization of wave sources:
 ## Project Structure
 The module is located in the src folder:
 * 'wavetorch.py' - module consisting of functions to simulate wave phenomena
-* 
+
 Demos using the module for reference can be found in the demos folder:
 * 'Generate Data.ipynb' - Jupyter Notebook file showcasing how wavetorch.py can be used to generate a 2d video of wave phenomena, and the wave signal at different locations
 * 'Signal Processing.ipynb' - Jupyter Notebook file showcasing how generated signals may be spectrally decomposed
