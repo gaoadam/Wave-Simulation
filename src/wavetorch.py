@@ -28,6 +28,8 @@ from ipywidgets import interact
 #Step function
 def step_2d(u, dt, dx, dy, c, u_prev1=0, boundary="None"):
     """
+    Calculate the value of wavefunction u at time t+dt, given u at time t
+
     Args:
         u: 2d array; values of u(x,y) at different values of x and y
         u_prev1: 2d array; values of u(x,y) at different values of x and y; 1 timestep ago;
@@ -37,7 +39,9 @@ def step_2d(u, dt, dx, dy, c, u_prev1=0, boundary="None"):
         dx: float; x step value
         dy: float; y step value
         c: float; wave equation constant
-                
+    
+    Returns:
+        u_new: 2d array; values of u(x,y) at next time step
     """
     
     #Given no boundary condition constraints
@@ -146,16 +150,24 @@ def step_2d(u, dt, dx, dy, c, u_prev1=0, boundary="None"):
 #Wave equation function
 def wave_eq(u_t0, g_r, wave_meta):
     """
+    Calculate wavefunction over time given the initial wave state and wave source functions
+
     Args:
-        u_t0: 2d array; values of u(x,y) at different values of x and y
+        u_t0: 2d array; values of u(x,y) at initial time t
         g_r: list containing functions paired with coordinates
                 each element is a dictionary of coordinates and functions
         wave_meta: metadata consisting of:
-            dx - x step value
-            dy - y step value
-            dt - time step value
-            c - wavefunction value
-            N_t - count of time steps
+            dx -- x step value
+            dy -- y step value
+            dt -- time step value
+            c -- wavefunction value
+            N_t -- count of time steps
+
+    Returns:
+        dictionary:
+            u_tensor -- torch tensor containing values of u over time
+            u_shape -- shape of u_tensor
+            wave_meta -- dictionary containing wave simulation metadata
     """
     
     #Get dimensions of u_t0 for storage
@@ -211,3 +223,27 @@ def wave_eq(u_t0, g_r, wave_meta):
     #return output
     return output
 
+def get_r_space(N_x, N_y, dx, dy):
+    """
+    Generate a 2d grid of x and y coordinate values
+
+    Args:
+        N_x: int, width of grid, ie shape[0]
+        N_y: int, height of grid, ie shape[0]
+        dx: float, step size of the x dimension
+        dy: float, step size of the y dimension
+
+    Returns:
+        r_space: torch tensor
+    
+    """
+    #Generate 2d grid containing x and y coordinates
+    xs = torch.linspace(0, (N_x-1)*dx, steps=N_x)
+    ys = torch.linspace(0, (N_y-1)*dy, steps=N_y)
+    
+    #Create meshgrid to calculate wave function
+    x_space, y_space = torch.meshgrid(xs, ys, indexing='xy')
+    r_space = x_space + y_space
+
+    #Return meshgrid
+    return r_space
