@@ -155,7 +155,7 @@ def wave_eq(u_t0, g_r, wave_meta):
     Args:
         u_t0: 2d array; values of u(x,y) at initial time t
         g_r: list containing functions paired with coordinates
-                each element is a dictionary of coordinates and functions
+                each element is a dictionary of coordinates and functions with keys 'coordinate' and 'function'
         wave_meta: metadata consisting of:
             dx -- x step value
             dy -- y step value
