@@ -15,15 +15,11 @@ import torchaudio
 
 #Write Libraries
 from pathlib import Path
-import imageio
 
 #Visualization libraries
 from matplotlib import pyplot as plt
 from matplotlib import cm
 from matplotlib import colors
-import seaborn as sns
-import ipywidgets as widgets
-from ipywidgets import interact
 
 #Step function
 def step_2d(u, dt, dx, dy, c, u_prev1=0, boundary="None"):
