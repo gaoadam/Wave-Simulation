@@ -17,8 +17,8 @@ The module is located in the src folder:
 * 'wavetorch.py' - module consisting of functions to simulate wave phenomena
 
 Demos using the module for reference can be found in the demos folder:
-* 'Generate Data.ipynb' - Jupyter Notebook file showcasing how wavetorch.py can be used to generate a 2d video of wave phenomena, and the wave signal at different locations
-* 'Signal Processing.ipynb' - Jupyter Notebook file showcasing how generated signals may be spectrally decomposed
+* 'demo_simulation.ipynb' - Jupyter Notebook file showcasing how wavetorch.py can be used to generate a 2d video of wave phenomena, and the wave signal at different locations
+* 'demo_signal_processing.ipynb' - Jupyter Notebook file showcasing how generated signals may be spectrally decomposed
 
 The raw tensor file generated in this project has been ommited from the repository, due to its enourmous file size.
 
