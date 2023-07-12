@@ -260,16 +260,23 @@ def generate_labels(u_tensor, source_coordinates, loc_coordinates):
     coordinate_columns = ['distance_from_' + str(x) for x in source_coordinates]
 
     #initialize output dataframe
-    df_output = pd.DataFrame(columns = coordinate_columns + ['loc'])
+    df_output = pd.DataFrame(columns = coordinate_columns)
 
     #populate dataframe with coordinate values
     for loc_coordinate in loc_coordinates:
         
         #Initialize row's data to append
-        data_append = {'loc': loc_coordinate}
+        data_append = {}
 
         #Add euclidian distances as row's values
         for source_coordinate in source_coordinates:
             #compute euclidian distance
             distance = (abs(source_coordinate[0]-loc_coordinate[0])**2 +  abs(source_coordinate[1]-loc_coordinate[1])**2)**(1/2)
+            #add wave source distance to data row dictionary
+            data_append['distance_from_' + str(source_coordinate)] = distance
 
+        #Append data row to dataframe
+        df_output = pd.concat([df_output, pd.DataFrame(data_append, index=[(loc_coordinate[0], loc_coordinate[1])])])
+
+    #return output dataframe
+    return df_output
