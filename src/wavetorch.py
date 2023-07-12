@@ -243,3 +243,33 @@ def get_r_space(N_x, N_y, dx, dy):
 
     #Return meshgrid
     return r_space
+
+def generate_labels(u_tensor, source_coordinates, loc_coordinates):
+    """
+    Generate a pandas dataframe containing flags determining the vicinity of a signal to the different wave sources.
+    
+    Args:
+        u_tensor (torch tensor): 3 dimensional tensor containing 2d wave amplitudes over time
+        source_coordinates (list of length 2 tuples): list of coordinates of wave sources
+        loc_coordinates (list of length 2 tuples): list of coordinates to be labeled
+
+    Returns:
+        df_labels: DataFrame, 
+    """
+    #define columns using wave source coordinates
+    coordinate_columns = ['distance_from_' + str(x) for x in source_coordinates]
+
+    #initialize output dataframe
+    df_output = pd.DataFrame(columns = coordinate_columns + ['loc'])
+
+    #populate dataframe with coordinate values
+    for loc_coordinate in loc_coordinates:
+        
+        #Initialize row's data to append
+        data_append = {'loc': loc_coordinate}
+
+        #Add euclidian distances as row's values
+        for source_coordinate in source_coordinates:
+            #compute euclidian distance
+            distance = (abs(source_coordinate[0]-loc_coordinate[0])**2 +  abs(source_coordinate[1]-loc_coordinate[1])**2)**(1/2)
+
